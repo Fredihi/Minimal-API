@@ -12,8 +12,8 @@ using Minimal_API.Data;
 namespace Minimal_API.Migrations
 {
     [DbContext(typeof(AppDbContext))]
-    [Migration("20230828171718_Initial Create")]
-    partial class InitialCreate
+    [Migration("20230925122235_Changed format of DateTime")]
+    partial class ChangedformatofDateTime
     {
         /// <inheritdoc />
         protected override void BuildTargetModel(ModelBuilder modelBuilder)

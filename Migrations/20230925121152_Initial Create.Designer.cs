@@ -12,8 +12,8 @@ using Minimal_API.Data;
 namespace Minimal_API.Migrations
 {
     [DbContext(typeof(AppDbContext))]
-    [Migration("20230828210150_Added BookStore for a list of books")]
-    partial class AddedBookStoreforalistofbooks
+    [Migration("20230925121152_Initial Create")]
+    partial class InitialCreate
     {
         /// <inheritdoc />
         protected override void BuildTargetModel(ModelBuilder modelBuilder)
