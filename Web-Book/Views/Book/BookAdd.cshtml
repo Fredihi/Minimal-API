@@ -1,0 +1,58 @@
+﻿@model BookDTO
+
+@{
+	ViewData["Title"] = "BookAdd";
+}
+
+
+
+<hr />
+<div class="row">
+	<h1 style="color:black;">Add New Book</h1>
+	<div>
+		<form asp-action="BookAdd">
+			<div asp-validation-summary="ModelOnly" class="text-danger"></div>
+
+			<div class="form-group">
+				<label asp-for="Name" class="control-label" style="color:black;"></label>
+				<input asp-for="Name" class="form-control" />
+				<span asp-validation-for="Name" class="text-danger"></span>
+			</div>
+
+			<div class="form-group">
+				<label asp-for="Author" class="control-label" style="color:black;"></label>
+				<input asp-for="Author" class="form-control" />
+				<span asp-validation-for="Author" class="text-danger"></span>
+			</div>
+
+			<div class="form-group">
+				<label asp-for="ReleaseYear" class="control-label" style="color:black;"></label>
+				<input asp-for="ReleaseYear" class="form-control" />
+			</div>
+
+			<div class="form-group">
+				<label asp-for="Genre" class="control-label" style="color:black;"></label>
+				<input asp-for="Genre" class="form-control" />
+			</div>
+
+			<div class="form-group" style="margin-bottom:15px;">
+				<label asp-for="Description" class="control-label" style="color:black;"></label>
+				<textarea asp-for="Description" class="form-control" style="height:120px" maxlength="150"></textarea>
+			</div>
+
+			<div class="form-group">
+				<input type="submit" value="Add" class="btn btn-success" style="margin-bottom:15px;" />
+			</div>
+		</form>
+	</div>
+	<div>
+		<a asp-action="BookIndex" class="btn btn-outline-dark"><i class="fa-solid fa-arrow-left"></i></a>
+	</div>
+</div>
+
+
+@section Scripts{
+	@{
+		await Html.RenderPartialAsync("_ValidationScriptsPartial");
+	}
+}

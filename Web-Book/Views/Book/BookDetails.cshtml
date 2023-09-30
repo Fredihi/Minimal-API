@@ -1,0 +1,53 @@
+﻿@model BookDTO
+
+@{
+	ViewData["Title"] = "BookDetails";
+}
+
+<link rel="stylesheet" href="~/lib/bootstrap/dist/css/bootstrap.min.css" />
+<link rel="stylesheet" href="~/css/site.css" asp-append-version="true" />
+
+<div class="DetailsBox">
+	<h3>Book</h3>
+	<hr />
+	<dl class="detailrow">
+		<dt class="detailtitle">
+			@Html.DisplayNameFor(model => model.Name)
+		</dt>
+		<dd class="detail">
+			@Html.DisplayFor(model => model.Name)
+		</dd>
+
+		<dt class="detailtitle">
+			@Html.DisplayNameFor(model => model.Author)
+		</dt>
+		<dd class="detail">
+			@Html.DisplayFor(model => model.Author)
+		</dd>
+
+		<dt class="detailtitle">
+			@Html.DisplayNameFor(model => model.ReleaseYear)
+		</dt>
+		<dd class="detail">
+			@Html.DisplayFor(model => model.ReleaseYear)
+		</dd>
+
+		<dt class="detailtitle">
+			@Html.DisplayNameFor(model => model.Genre)
+		</dt>
+		<dd class="detail">
+			@Html.DisplayFor(model => model.Genre)
+		</dd>
+
+		<dt class="detailtitle">
+			@Html.DisplayNameFor(model => model.Description)
+		</dt>
+		<dd class="detail">
+			@Html.DisplayFor(model => model.Description)
+		</dd>
+	</dl>
+	<div>
+		<a asp-action="BookIndex" class="btn btn-outline-dark"><i class="fa-solid fa-arrow-left"></i></a>
+	</div>
+</div>
+

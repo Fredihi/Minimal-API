@@ -1,0 +1,61 @@
+﻿@model IEnumerable<BookDTO>
+@{
+	ViewData["Title"] = "BookIndex";
+}
+<link rel="stylesheet" href="~/lib/bootstrap/dist/css/bootstrap.min.css" />
+<link rel="stylesheet" href="~/css/site.css" asp-append-version="true" />
+<body>
+	<div class="box">
+		<div class="details">
+			<h1 class="title">Books</h1>
+			<p>
+				<a asp-action="BookAdd" class="btn btn-outline-primary bg-black text-white">Add <i class="fa-solid fa-plus"></i></a>
+
+			</p>
+			<table class="table" style="border-bottom:thick;">
+				<thead>
+					<tr>
+						@* <th>
+						@Html.DisplayNameFor(model => model.ID)
+						</th> *@
+						<th class="bookheader">
+							@Html.DisplayNameFor(model => model.Name)
+						</th>
+						<th class="bookheader">
+							@Html.DisplayNameFor(model => model.Author)
+						</th>
+						<th class="bookheader">
+							@Html.DisplayNameFor(model => model.ReleaseYear)
+						</th>
+						<th class="bookheader">
+							@Html.DisplayNameFor(model => model.Genre)
+						</th>
+						<th class="bookheader">
+							@Html.DisplayNameFor(model => model.Description)
+						</th>
+					</tr>
+				</thead>
+				<tbody>
+					@foreach (var item in Model)
+					{
+						<tr>
+							@* <td>@Html.DisplayFor(modelItem => item.ID)</td> *@
+							<td class="books">@Html.DisplayFor(modelItem => item.Name)</td>
+							<td class="books">@Html.DisplayFor(modelItem => item.Author)</td>
+							<td class="books">@Html.DisplayFor(modelItem => item.ReleaseYear)</td>
+							<td class="books">@Html.DisplayFor(modelItem => item.Genre)</td>
+							<td class="books">@Html.DisplayFor(modelItem => item.Description)</td>
+							<td class="tablebtns">
+								<a asp-action="BookDetails" class="btn btn-success" asp-route-ID="@item.ID">Details<i class="fa-solid fa-circle-info"></i></a>
+								<a asp-action="BookUpdate" class="btn btn-warning" asp-route-ID="@item.ID">Edit<i class="fa-solid fa-pen-to-square"></i></a>
+								<a asp-action="BookDelete" class="btn btn-danger" asp-route-ID="@item.ID">Delete<i class="fa-solid fa-trash"></i></a>
+							</td>
+						</tr>
+					}
+				</tbody>
+			</table>
+			
+		</div>
+	</div>
+</body>
+

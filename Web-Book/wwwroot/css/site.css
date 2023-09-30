@@ -1,0 +1,86 @@
+html {
+  font-size: 14px;
+}
+
+@media (min-width: 768px) {
+  html {
+    font-size: 16px;
+  }
+}
+
+.btn:focus, .btn:active:focus, .btn-link.nav-link:focus, .form-control:focus, .form-check-input:focus {
+  box-shadow: 0 0 0 0.1rem white, 0 0 0 0.25rem #258cfb;
+}
+
+html {
+  position: relative;
+  min-height: 100%;
+}
+
+body {
+    margin-bottom: 60px;
+    background: rgb(22,22,22);
+    background: linear-gradient(180deg, rgba(0,0,0,1) 23%, rgba(193,20,55,1) 100%);
+}
+
+.books{
+    font-weight:bolder;
+    font-family: Arial, Helvetica, sans-serif;
+    color:black;
+}
+.bookheader{
+    color:black;
+    font-size:22px;
+}
+.container{
+    
+}
+.details{
+    background:white;
+    border-radius: 8px;
+    padding:20px;
+    
+}
+.title{
+    display:flex;
+    justify-content:center;
+}
+.home{
+    color:white;
+    text-decoration:none;
+    font-size: 25px;
+    padding:12px;
+}
+.home:hover{
+    color:red;
+}
+.nav-item{
+    font-size: 20px;
+}
+.DetailsBox{
+    background:white;
+    padding:20px;
+    border-radius:8px;
+}
+.form-group{
+    font-weight: bolder;
+    font-size: 20px;
+    color:white;
+}
+.tablebtns{
+    display:flex;
+    align-content:start;
+    border:none;
+}
+.row{
+    background:white;
+    border-radius:8px;
+    width:500px;
+    padding:20px;
+}
+.detailtitle{
+    font-size:20px;
+}
+.detail{
+    font-size:18px;
+}
